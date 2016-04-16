@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <h1>how scuzzy are you?</h1>
+                <h4>wee website to see where you rank in scotland in terms of shiteness.</h4>
+            </div>
+            
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">new postcode</a></li>
+                    <li><a  class="active" href="#">your info</a></li>
+                    <li><a href="comparison.html">compare</a></li>
+                </ul>
+            </div>
+
+            <div id="main">
+                
+                <p>Here are the stats for your street!</p>
+                
+                <div class="nav">
+                    <table>
+                        <tr>
+                            <th>Your postcode:</th>
+                            <td>{{ input.postcode }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Your rank (6065 being best):</th>
+                            <td>{{ input.rank }}/6065</td>
+                        </tr>
+
+                        <tr>
+                            <th>2012 Rating/20:</th>
+                            <td>{{ input.vigintile }}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Population (2010):</th>
+                            <td>{{ input.population }}</td>
+                        </tr>
+                        <tr>
+                            <th>Area Name:</th>
+                            <td>{{ input.name }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <p><a href="{{ url_for('compare') }}">compare</a></p>
+        </div>
+    </body>
+</html>
