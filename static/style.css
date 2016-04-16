@@ -43,12 +43,15 @@ html, body {
     padding: 5%;
 }
 
+<<<<<<< HEAD
 #footer{
     text-align: center;
     background: #795548;
     padding: 1%;
 }
 
+=======
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
 .nav table {
     list-style: none;
     overflow: auto;
@@ -68,16 +71,23 @@ html, body {
 
 .nav th{
     color: black;
+<<<<<<< HEAD
     font-weight: bold;
 }
 
 .nav td{
     color: black;
+=======
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
 }
 
 /* CSS for the whole <UL> list for the nav id only  */
 
+<<<<<<< HEAD
 .navbar ul {    
+=======
+.navBar ul {    
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
   list-style: none;
   overflow:auto; 
   background-color: #CCB598;
@@ -90,7 +100,11 @@ html, body {
 
 /* CSS for each list element inside the <UL>, inside the nav id */
 
+<<<<<<< HEAD
 .navbar li {    
+=======
+.navBar li {    
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
   line-height: 40px;
   width: 33.3%;
   float:left;
@@ -98,19 +112,31 @@ html, body {
 
 /* CSS for each <a> attribute inside nav id only */
 
+<<<<<<< HEAD
 .navbar a {   
+=======
+.navBar a {   
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
     text-decoration: none;
     color: black;
     display: block;
     transition:.3s background-color;    
 }
 
+<<<<<<< HEAD
 .navbar a:hover {  
+=======
+.navBar a:hover {  
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
     background-color: #4E3515; 
     color: white;
 }
 
+<<<<<<< HEAD
 .navbar a.active {   
+=======
+.navBar a.active {   
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
     background-color: #4E3515;
     color: white;     
 }

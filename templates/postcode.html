@@ -14,15 +14,26 @@ and open the template in the editor.
     <body>
         <div id="wrap">
             <div id="header">
+<<<<<<< HEAD
                 <h1>Rate Your Postcode</h1>
                 <h4>Check where your home address ranks in Scotland</h4>
+=======
+                <h1>how scuzzy are you?</h1>
+                <h4>wee website to see where you rank in scotland in terms of shiteness.</h4>
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
             </div>
             
             <div class="navbar">
                 <ul>
+<<<<<<< HEAD
                     <li><a href="{{ url_for('index') }}">New Postcode</a></li>
                     <li><a  class="active" href="#">Your Info</a></li>
                     <li><a href="{{ url_for('compare',code=input.postcode) }}">Compare</a></li>
+=======
+                    <li><a href="index.html">new postcode</a></li>
+                    <li><a  class="active" href="#">your info</a></li>
+                    <li><a href="comparison.html">compare</a></li>
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
                 </ul>
             </div>
 
@@ -38,8 +49,13 @@ and open the template in the editor.
                         </tr>
 
                         <tr>
+<<<<<<< HEAD
                             <th>Your rank (6505 being best):</th>
                             <td>{{ input.rank }}/6505</td>
+=======
+                            <th>Your rank (6065 being best):</th>
+                            <td>{{ input.rank }}/6065</td>
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
                         </tr>
 
                         <tr>
@@ -59,9 +75,13 @@ and open the template in the editor.
                 </div>
             </div>
 
+<<<<<<< HEAD
             <div id="footer">
                 <h4> &COPY; Dundee Dream Team</h4>
             </div>
+=======
+            <p><a href="{{ url_for('compare') }}">compare</a></p>
+>>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
         </div>
     </body>
 </html>
