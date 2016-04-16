@@ -16,3 +16,16 @@ html, body {
     width: 100%;
     background: #ccc;
 }
+
+#wrap{
+    min-height: 100%;
+    overflow: auto;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#main{
+    
+}
+
