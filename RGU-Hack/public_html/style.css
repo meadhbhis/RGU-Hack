@@ -63,3 +63,43 @@ html, body {
 .nav th{
     color: black;
 }
+
+/* CSS for the whole <UL> list for the nav id only  */
+
+.navBar ul {    
+  list-style: none;
+  overflow:auto; 
+  background-color: #CCB598;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 1px 4px 1px black; 
+  color: black;
+}
+
+/* CSS for each list element inside the <UL>, inside the nav id */
+
+.navBar li {    
+  line-height: 40px;
+  width: 33.3%;
+  float:left;
+}
+
+/* CSS for each <a> attribute inside nav id only */
+
+.navBar a {   
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition:.3s background-color;    
+}
+
+.navBar a:hover {  
+    background-color: #4E3515; 
+    color: white;
+}
+
+.navBar a.active {   
+    background-color: #4E3515;
+    color: white;     
+}
