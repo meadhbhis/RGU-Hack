@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>How do you fair?</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <h1>Rate Your Postcode</h1>
+                <h4>Check where your home address ranks in Scotland</h4>
+            </div>
+            
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">New Postcode</a></li>
+                    <li><a   href="yourInfo.html">Your Info</a></li>
+                    <li><a class="active" href="#">Compare</a></li>
+                </ul>
+            </div>
+
+            <div id="main">
+                <p>Where do you fit in amongst your peers?</p>
+                
+                <p>{{ input.name }}</p>
+                <p>{{ input.population }}</p>
+                <p>{{ input.vigintile }}</p>
+                <p>{{ input.rank }}</p>
+                <p>{{ input.postcode }}</p>
+            </div>
+            
+            <div id="footer">
+                <h4> &COPY; Dundee Dream Team</h4>
+            </div>
+        </div>
+    </body>
+</html>

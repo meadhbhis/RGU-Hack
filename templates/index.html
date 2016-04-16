@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>How scuzzy are you?</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <h1>Rate Your Postcode</h1>
+                <h4>Check where your home address ranks in Scotland</h4>
+            </div>
+
+            <div id="main">
+                <div class="nav">   
+                    <p>Fill in your postcode below to see where your street ranks in Scotland in terms of ______.</p>
+                    <p>Enter your name to see where you rank with your friends!</p>
+                    
+                    <table>
+                        <form action="postcode-posted" method="POST">
+                            <tr>
+                                <th>Enter your postcode here:</th>
+                                <td><input type="text" name="postcode"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Enter your name:</th>
+                                <td><input type="text" name="name"></td> 
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td><input type="submit" value="Enter!"></td>
+                            </tr>
+                        </form>
+                    </table>
+                </div>
+            </div>
+            <div id="footer">
+                <h4> &COPY; Dundee Dream Team</h4>
+            </div>
+        </div>
+    </body>
+</html>
