@@ -6,23 +6,46 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>How scuzzy are you?</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
-        <div>
-            <p>How scuzzy are you?</p>
-        </div>
-        
-        <div>
-            <p>Wee website to see where you rank in Scotland in terms of shiteness.</p>
-            
-            <ul>
-                <li>Enter your postcode here: <input type="text" name="postcode"></li>
-                <li>Enter your name: <input type="text" name="name"></li>        
-            </ul>
-            <input type="submit" value="SUBMIT">
+        <div id="wrap">
+            <div id="header">
+                <h1>How scuzzy are you?</h1>
+                <h4>Wee website to see where you rank in Scotland in terms of shiteness.</h4>
+            </div>
+
+            <div id="main">
+                
+                <div class="nav">
+                    
+                    <p>Fill in your postcode below to see where your street ranks in Scotland in terms of ______.</p>
+                    <p>Enter your name to see where you rank with your friends!</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Enter your postcode here:</th>
+                        <td><input type="text" name="postcode"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Enter your name:</th>
+                            <td><input type="text" name="name"></td> 
+                        </tr>
+                    <tr>
+                        <th></th>
+                        <td><input type="submit" value="SUBMIT"></td>
+                        </tr>
+                    </table>
+                
+                </div>
+
+            </div>
+
+            <p><a href="yourInfo.html">yourInfo</a></p>
         </div>
     </body>
 </html>
