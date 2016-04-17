@@ -44,17 +44,15 @@ def postcode(code):
     input_dict = {'postcode': code, 'rank': imd[code][0], 'vigintile': imd[code][1], 'population': imd[code][2], 'name': imd[code][3]}
     return render_template('postcode.html', input=input_dict)
 
-<<<<<<< HEAD
 @app.route('/compare/<code>')
 def compare(code):
 	input_dict = {'postcode': code, 'rank': imd[code][0], 'vigintile': imd[code][1], 'population': imd[code][2], 'name': imd[code][3]}
 	return render_template('comparison.html', input=input_dict)
 
-=======
 @app.route('/compare/')
 def compare():
     return render_template('comparison.html')
->>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
+
 @app.errorhandler(404)
 def not_found(e):
     return "Ye've daen summin wrang here pal", 404
