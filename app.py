@@ -3,6 +3,7 @@ Main server file for application.
 """
 import csv
 import sqlite3
+import HTMLParser
 
 from flask import Flask, request, g, redirect, render_template, url_for, abort
 
@@ -29,7 +30,6 @@ def index():
 @app.route('/postcode-posted', methods=['POST'])
 def posted():
     postcode = request.form['postcode'].lower().replace(' ', '')
-    print postcode
     try:
         imd[postcode]
         c = get_db().cursor()
@@ -46,8 +46,10 @@ def postcode(code):
 
 @app.route('/compare/<code>')
 def compare(code):
-	input_dict = {'postcode': code, 'rank': imd[code][0], 'vigintile': imd[code][1], 'population': imd[code][2], 'name': imd[code][3]}
-	return render_template('comparison.html', input=input_dict)
+    c = get_db().cursor()
+    table_data = c.execute("SELECT vigintile, COUNT(*) FROM postcodes GROUP BY vigintile").fetchall()
+    input_dict = {'postcode': code, 'rank': imd[code][0], 'vigintile': imd[code][1], 'population': imd[code][2], 'name': imd[code][3], 'table_data': table_data}
+    return render_template('comparison.html', input=input_dict)
 
 @app.errorhandler(404)
 def not_found(e):
