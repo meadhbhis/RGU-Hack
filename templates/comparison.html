@@ -24,12 +24,22 @@ and open the template in the editor.
                       ]);
 
                 var options = {
-                    title: 'Postcode Spread',
+                    title: '', 
                     curveType: 'function',
-                    legend: {position: 'none'},
+                    legend: {position: 'center'},
+                    
+                    colors: ['black'],
 
-                    vAxis: {minValue: 1, title: "Frequency"},
-                    hAxis: {minValue: 1, maxvValue: 20, title: "Vigintile"},
+                    vAxis: {minValue: 0, title: "Frequency"},
+                    hAxis: {minValue: 1, maxvValue: 20, title: "Vigintile (Rating out of 20)"},
+                    
+                    backgroundColor: '#D7CCC8',
+                    
+                   
+                        textStyle:{
+                            fontName: 'Courier New',
+                        }
+                    
                 };
 
                 var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -37,6 +47,7 @@ and open the template in the editor.
                 chart.draw(data, options);
             }
         </script>
+       
     </head>
     <body>
         <div id="wrap">
@@ -54,16 +65,27 @@ and open the template in the editor.
             </div>
 
             <div id="main">
-                <p>Where do you fit in amongst your peers?</p>
+                <div id="graphArea">
+                    <h3>Where do you fit in amongst your peers?</h3>
 
-                <div id="curve_chart" style="width:100%;">
+                    <div id="curve_chart">
+                    </div>
+
+                    <table id="rank_table">
+                        
+                        <tr id="rank_title">
+                            <th>Rank</th>
+                            <th>Name</th>
+                        </tr>
+                       
+                        {% for row in input.person_name %}
+                        <tr>
+                            <th>{{ row[3] }}</th>
+                            <td>{{ row[1] }}</td>
+                         </tr>       
+                        {% endfor %}
+                    </table>
                 </div>
-                
-                <p>{{ input.name }}</p>
-                <p>{{ input.population }}</p>
-                <p>{{ input.vigintile }}</p>
-                <p>{{ input.rank }}</p>
-                <p>{{ input.postcode }}</p>
             </div>
             
             <div id="footer">

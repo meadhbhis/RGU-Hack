@@ -43,11 +43,32 @@ html, body {
     padding: 5%;
 }
 
+#graphArea{
+    background: #D7CCC8;
+    padding: 1%;
+    color: black;
+}
+
+#curve_chart{
+    width: 100%;
+}
 
 #footer{
     text-align: center;
     background: #795548;
     padding: 1%;
+}
+
+#rank_table{
+    padding-top: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    width: 100%;
+}
+
+#rank_title{
+    background: black;
+    color: white;
 }
 
 input{

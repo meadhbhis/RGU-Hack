@@ -48,7 +48,8 @@ def postcode(code):
 def compare(code):
     c = get_db().cursor()
     table_data = c.execute("SELECT vigintile, COUNT(*) FROM postcodes GROUP BY vigintile").fetchall()
-    input_dict = {'postcode': code, 'rank': imd[code][0], 'vigintile': imd[code][1], 'population': imd[code][2], 'name': imd[code][3], 'table_data': table_data}
+    person_name = c.execute("SELECT * from postcodes ORDER BY rank DESC").fetchall()
+    input_dict = {'postcode': code, 'rank': imd[code][0], 'vigintile': imd[code][1], 'population': imd[code][2], 'name': imd[code][3], 'table_data': table_data, 'person_name': person_name}
     return render_template('comparison.html', input=input_dict)
 
 @app.errorhandler(404)
