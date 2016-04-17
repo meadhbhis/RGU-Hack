@@ -14,28 +14,19 @@ and open the template in the editor.
     <body>
         <div id="wrap">
             <div id="header">
-<<<<<<< HEAD
                 <h1>Rate Your Postcode</h1>
                 <h4>Check where your home address ranks in Scotland</h4>
             </div>
             
             <div class="navbar">
-=======
-                <h1>How scuzzy are you?</h1>
-                <h4>Wee website to see where you rank in Scotland in terms of shiteness.</h4>
-            </div>
-            
-            <div class="navBar">
->>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
                 <ul>
-                    <li><a href="index.html">New Postcode</a></li>
-                    <li><a   href="yourInfo.html">Your Info</a></li>
+                    <li><a href="{{ url_for('index') }}">New Postcode</a></li>
+                    <li><a href="{{ url_for('postcode',code=input.postcode) }}">Your Info</a></li>
                     <li><a class="active" href="#">Compare</a></li>
                 </ul>
             </div>
 
             <div id="main">
-<<<<<<< HEAD
                 <p>Where do you fit in amongst your peers?</p>
                 
                 <p>{{ input.name }}</p>
@@ -47,12 +38,6 @@ and open the template in the editor.
             
             <div id="footer">
                 <h4> &COPY; Dundee Dream Team</h4>
-=======
-                
-                <p>Where do you fit in amongst your peers?</p>
-                
-                <p>pure mad wee graph here</p>
->>>>>>> ab879a27fe1101217a6294077ce3db8f31ac52e5
             </div>
         </div>
     </body>
