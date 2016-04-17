@@ -50,6 +50,11 @@ html, body {
     padding: 1%;
 }
 
+input{
+    font-family: 'Courier New', monospace;
+    width: 98%;
+}
+
 .nav table {
     list-style: none;
     overflow: auto;
