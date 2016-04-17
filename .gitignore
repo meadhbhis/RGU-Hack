@@ -2,6 +2,7 @@
 Thumbs.db
 ehthumbs.db
 
+*.swp
 # Folder config file
 Desktop.ini
 
